@@ -10,6 +10,8 @@ import rootSaga from './sagas';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 axios.defaults.withCredentials = true;
 axios.defaults.baseURL = '';
 
