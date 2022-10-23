@@ -1,13 +1,12 @@
 import React from 'react';
+import {RouterProvider} from "react-router-dom";
+
+import router from './routers';
 
 interface AppProps {}
 
 const App: React.FC<AppProps> = () => (
-  <div className="App">
-    <header className="App-header">
-      App Component
-    </header>
-  </div>
+  <RouterProvider router={router}/>
 );
 
 export default App;
