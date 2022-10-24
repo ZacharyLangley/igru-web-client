@@ -5,9 +5,9 @@ import {Provider} from 'react-redux';
 import {createStore, applyMiddleware} from 'redux';
 import createSagaMiddleware from '@redux-saga/core';
 
-import reducers from './reducers';
-import rootSaga from './sagas';
-import App from './App';
+import reducers from './domain/reducers';
+import rootSaga from './domain/sagas';
+import App from './app/App';
 import reportWebVitals from './reportWebVitals';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
