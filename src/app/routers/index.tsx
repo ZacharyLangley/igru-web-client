@@ -1,12 +1,12 @@
 import React from 'react';
 import {createBrowserRouter} from 'react-router-dom';
 
-import Home from '../screens/Home';
+import Main from '../screens/Main';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home />,
+    element: <Main />,
   },
 ]);
 
