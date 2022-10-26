@@ -5,3 +5,17 @@ $black: #12130f;
 $grey: #494850;
 
 $green-shade: #469d4b;
+
+$android-prefix: '-webkit-';
+$ios-prefix: '-webkit-';
+$chrome-prefix: '-webkit-';
+$safari-prefix: '-webkit';
+$firefox-prefix: '-moz-';
+$opera-prefix: '-o-';
+$no-prefix: '';
+
+@mixin support-prefix($name, $value) {
+    @each $vendor in ($chrome-prefix, $firefox-prefix, $opera, $no-prefix) {
+      #{$vendor}#{$name}: #{$value};
+    }
+  }

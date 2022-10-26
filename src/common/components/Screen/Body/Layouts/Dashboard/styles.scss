@@ -1,0 +1,15 @@
+.dash-layout-container {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    .dash-top-content {
+        max-width: 960px;
+        margin-bottom: 32px;
+        .dash-top-item {}
+    }
+
+    .dash-bottom-content {
+        max-width: 960px;
+
+    }
+}

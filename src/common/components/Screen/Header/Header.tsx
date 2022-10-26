@@ -25,9 +25,8 @@ const Header: React.FC<HeaderProps> = ({
         className={'menu-btn'}
         light
         outline
-        onClick={onClick}
-      >
-        {'='}
+        onClick={onClick}>
+        {'\u2261'}
       </Button>
       <NavbarBrand id={`${testID}:logo:container`} href='/' className='me-auto'>
         <Logo testID={`${testID}:logo`} />
