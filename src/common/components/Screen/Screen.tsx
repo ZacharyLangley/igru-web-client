@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './styles';
+import './styles.scss';
 
 export interface GlobalLayoutProps {
   testID?: string;
@@ -9,7 +9,7 @@ export interface GlobalLayoutProps {
 
 const Screen: React.FC<GlobalLayoutProps> = ({testID, children}) => {
   return (
-    <div id={testID} style={styles.container}>
+    <div id={testID} className={'screen-container'}>
       {children}
     </div>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './styles';
+import './styles.scss';
 
 export interface BodyProps {
   testID?: string;
@@ -12,7 +12,7 @@ const Body: React.FC<BodyProps> = ({
   children,
 }) => {
   return (
-    <div id={testID} style={styles.container}>
+    <div id={testID} className={'body-container'}>
       {children}
     </div>
   );

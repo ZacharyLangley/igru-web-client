@@ -8,11 +8,15 @@ export interface SidebarProps {
   onClose?: () => void;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({testID = 'global-layout-sidebar', isOpen, onClose}) => {
+const Sidebar: React.FC<SidebarProps> = ({
+  testID = 'global-layout-sidebar',
+  isOpen,
+  onClose,
+}) => {
   return (
     <Offcanvas id={`${testID}:container`} direction='start' isOpen={isOpen}>
       <OffcanvasHeader id={`${testID}:header`} toggle={onClose}>
-        <Logo testID={`${testID}:logo`}/>
+        <Logo testID={`${testID}:logo`} />
       </OffcanvasHeader>
       <OffcanvasBody id={`${testID}:body`}>
         <strong>This is the Sidebar body.</strong>

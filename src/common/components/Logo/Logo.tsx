@@ -1,7 +1,7 @@
 import React from 'react';
 
 import logo from '../../assets/branding/IGRU_White_logo.png';
-import styles from './styles';
+import './styles.scss';
 
 export interface LogoProps {
   testID?: string;
@@ -16,10 +16,11 @@ const Logo: React.FC<LogoProps> = ({
   width = 40,
   hideName = false,
 }) => (
-  <div id={`${testID}:container`} style={styles.logoContainer}>
-    <div id={`${testID}:img:container`}>
+  <div id={`${testID}:container`} className={'logo-container'}>
+    <div id={`${testID}:img:container`} className={'logo-img-container'}>
       <img
         id={`${testID}:img:asset`}
+        className={'logo-img'}
         src={logo}
         alt={'branding'}
         height={height}
@@ -27,7 +28,7 @@ const Logo: React.FC<LogoProps> = ({
       />
     </div>
     {!hideName && (
-      <div id={`${testID}:text`} style={styles.text}>
+      <div id={`${testID}:text`} className={'logo-text'}>
         {'IGRU'}
       </div>
     )}
