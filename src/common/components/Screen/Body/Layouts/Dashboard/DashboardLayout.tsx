@@ -20,7 +20,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({testID = 'dashboard-la
                 <Col className={'dash-top-item'}><ChartCardPlaceholder /></Col>
                 <Col className={'dash-top-item'}><ChartCardPlaceholder /></Col>
             </Row>
-            <Row id={`${testID}:row:bottom`}  className={'dash-bottom-content'}>
+            <Row id={`${testID}:row:bottom`} className={'dash-bottom-content'}>
                 <Col className=""><TableCardPlaceHolder /></Col>
             </Row>
         </Container>

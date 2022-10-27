@@ -7,8 +7,8 @@ export interface TableCardPlaceHolderProps {
 
 const TableCardPlaceHolder: React.FC<TableCardPlaceHolderProps> = ({testID = 'table-card-placeholder'}) => {
     return (
-        <Card testID={testID} style={{width: 934}}>
-            <div style={{minHeight: 0, height: 400, backgroundColor: 'grey', borderRadius: 5}} />
+        <Card testID={testID}>
+            <div style={{flex: 1, minHeight: 0, height: 400, minWidth: 0, backgroundColor: 'grey', borderRadius: 5}} />
         </Card>
     )
 }
