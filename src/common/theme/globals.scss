@@ -15,7 +15,7 @@ $opera-prefix: '-o-';
 $no-prefix: '';
 
 @mixin support-prefix($name, $value) {
-    @each $vendor in ($chrome-prefix, $firefox-prefix, $opera, $no-prefix) {
-      #{$vendor}#{$name}: #{$value};
-    }
+  @each $vendor in ($chrome-prefix, $firefox-prefix, $opera, $no-prefix) {
+    #{$vendor}#{$name}: #{$value};
   }
+}

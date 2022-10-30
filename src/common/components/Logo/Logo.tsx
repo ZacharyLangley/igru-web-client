@@ -5,6 +5,7 @@ import './styles.scss';
 
 export interface LogoProps {
   testID?: string;
+  onClick?: () => void;
   height?: number;
   width?: number;
   hideName?: boolean;
@@ -12,11 +13,16 @@ export interface LogoProps {
 
 const Logo: React.FC<LogoProps> = ({
   testID = 'igru-branding-logo',
+  onClick,
   height = 40,
   width = 40,
   hideName = false,
 }) => (
-  <div id={`${testID}:container`} className={'logo-container'}>
+  <div
+    id={`${testID}:container`}
+    className={'logo-container'}
+    onClick={onClick}
+  >
     <div id={`${testID}:img:container`} className={'logo-img-container'}>
       <img
         id={`${testID}:img:asset`}

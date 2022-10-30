@@ -17,15 +17,14 @@ const Header: React.FC<HeaderProps> = ({
     <Navbar
       id={`${testID}:container`}
       color={'faded'}
-      light
       className={'header-container'}
     >
       <Button
         id={`${testID}:menu-btn`}
         className={'menu-btn'}
-        light
         outline
-        onClick={onClick}>
+        onClick={onClick}
+      >
         {'\u2261'}
       </Button>
       <NavbarBrand id={`${testID}:logo:container`} href='/' className='me-auto'>

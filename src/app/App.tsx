@@ -5,6 +5,8 @@ import router from './routers';
 
 interface AppProps {}
 
-const App: React.FC<AppProps> = () => <RouterProvider router={router} />;
+const App: React.FC<AppProps> = () => {
+  return <RouterProvider router={router} />;
+};
 
 export default App;
