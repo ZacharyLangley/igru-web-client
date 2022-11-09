@@ -1,24 +1,24 @@
 import React, {useState} from 'react';
 import {Outlet, useNavigate} from 'react-router-dom';
 
-import Layout from '../../common/components/Screen/Screen';
-import Header from '../../common/components/Screen/Header/Header';
-import Body from '../../common/components/Screen/Body/Body';
+import Layout from '../../../common/components/Screen/Screen';
+import Header from '../../../common/components/Screen/Header/Header';
+import Body from '../../../common/components/Screen/Body/Body';
 import Sidebar, {
   SidebarOptions,
-} from '../../common/components/Screen/Sidebar/Sidebar';
+} from '../../../common/components/Screen/Sidebar/Sidebar';
 
-import allIcon from '../../common/assets/icons/nav/all_icon.png';
-import tasksIcon from '../../common/assets/icons/nav/tasks_icon.png';
-import gardensIcon from '../../common/assets/icons/nav/gardens_icon.png';
-import plantsIcon from '../../common/assets/icons/nav/plants_icon.png';
-import strainsIcon from '../../common/assets/icons/nav/strains_icon.png';
-import recipesIcon from '../../common/assets/icons/nav/recipes_icon.png';
-import settingsIcon from '../../common/assets/icons/nav/settings_icon.png';
+import allIcon from '../../../common/assets/icons/nav/all_icon.png';
+import tasksIcon from '../../../common/assets/icons/nav/tasks_icon.png';
+import gardensIcon from '../../../common/assets/icons/nav/gardens_icon.png';
+import plantsIcon from '../../../common/assets/icons/nav/plants_icon.png';
+import strainsIcon from '../../../common/assets/icons/nav/strains_icon.png';
+import recipesIcon from '../../../common/assets/icons/nav/recipes_icon.png';
+import settingsIcon from '../../../common/assets/icons/nav/settings_icon.png';
 
-import { RouteLabel, RoutePath } from '../types/routes';
+import {RouteLabel, RoutePath} from '../../types/routes';
 
-interface AuthScreenProps {}
+interface MainScreenProps {}
 
 const sidebarOptions: SidebarOptions[] = [
   {
@@ -58,7 +58,7 @@ const sidebarOptions: SidebarOptions[] = [
   },
 ];
 
-const AuthScreen: React.FC<AuthScreenProps> = () => {
+const MainScreen: React.FC<MainScreenProps> = () => {
   const [openSidebar, setOpenSidebar] = useState(false);
   const navigate = useNavigate();
   const toggleSidebar = () => {
@@ -68,7 +68,7 @@ const AuthScreen: React.FC<AuthScreenProps> = () => {
   const onOptionSelection = (path?: string) => {
     if (path) navigate(path);
     toggleSidebar();
-  }
+  };
 
   return (
     <Layout>
@@ -86,4 +86,4 @@ const AuthScreen: React.FC<AuthScreenProps> = () => {
   );
 };
 
-export default AuthScreen;
+export default MainScreen;
