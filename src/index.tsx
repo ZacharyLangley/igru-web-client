@@ -2,10 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import axios from 'axios';
 import {Provider} from 'react-redux';
-import {createStore, applyMiddleware} from 'redux';
 import createSagaMiddleware from '@redux-saga/core';
+import createConfiguredStore from './domain/reducers';
 
-import reducers from './domain/reducers';
 import rootSaga from './domain/sagas';
 import App from './app/App';
 import reportWebVitals from './reportWebVitals';
@@ -16,14 +15,12 @@ axios.defaults.withCredentials = true;
 axios.defaults.baseURL = '';
 
 const sagaMiddleware = createSagaMiddleware();
-const store = createStore(reducers, applyMiddleware(sagaMiddleware));
+const store = createConfiguredStore([sagaMiddleware]);
 sagaMiddleware.run(rootSaga);
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
-
-console.log(process.env);
 
 root.render(
   <React.StrictMode>

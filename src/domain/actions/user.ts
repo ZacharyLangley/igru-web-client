@@ -1,24 +1,24 @@
 import {UserActionTypes} from '../types/user';
 import {
-  DispatchSignInAction,
+  DispatchLoginAction,
   DispatchSignOutAction,
-  DispatchSignUpAction,
+  DispatchRegisterAction,
   DispatchResetPasswordAction,
   DispatchCreateSessionAction,
   DispatchValidateSessionAction,
   SetUserInformationAction,
 } from '../interfaces/user';
 
-export const dispatchSignInAction = (): DispatchSignInAction => ({
-  type: UserActionTypes.DISPATCH_SIGN_IN_ACTION,
+export const dispatchLoginAction = (): DispatchLoginAction => ({
+  type: UserActionTypes.DISPATCH_LOGIN_ACTION,
 });
 
 export const dispatchSignOutAction = (): DispatchSignOutAction => ({
   type: UserActionTypes.DISPATCH_SIGN_OUT_ACTION,
 });
 
-export const dispatchSignUpAction = (): DispatchSignUpAction => ({
-  type: UserActionTypes.DISPATCH_SIGN_UP_ACTION,
+export const dispatchRegisterAction = (): DispatchRegisterAction => ({
+  type: UserActionTypes.DISPATCH_REGISTER_ACTION,
 });
 
 export const dispatchResetPasswordAction = (): DispatchResetPasswordAction => ({

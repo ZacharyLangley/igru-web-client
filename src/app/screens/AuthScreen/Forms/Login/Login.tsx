@@ -1,19 +1,19 @@
 import React, {useState} from 'react';
 import AuthForm from '../../AuthForm/AuthForm';
-import SigninForm, {defaultSignInFormData} from './SigninForm/SigninForm';
+import LoginForm, {defaultLoginFormData} from './LoginForm/LoginForm';
 
-interface SigninProps {
+interface LoginProps {
   testID?: string;
   title?: string;
   form?: JSX.Element | JSX.Element[];
 }
 
-const Signin: React.FC<SigninProps> = ({
+const Login: React.FC<LoginProps> = ({
   testID = 'sign-in-form-container',
   title,
   form,
 }) => {
-  const [formData, setFormData] = useState(defaultSignInFormData);
+  const [formData, setFormData] = useState(defaultLoginFormData);
 
   const updateFormData = (key: string, value: number | string) => {
     setFormData({
@@ -25,9 +25,9 @@ const Signin: React.FC<SigninProps> = ({
   return (
     <AuthForm
       title={'SIGN INTO YOUR ACCOUNT'}
-      form={<SigninForm formData={formData} onChange={updateFormData} />}
+      form={<LoginForm formData={formData} onChange={updateFormData} />}
     />
   );
 };
 
-export default Signin;
+export default Login;

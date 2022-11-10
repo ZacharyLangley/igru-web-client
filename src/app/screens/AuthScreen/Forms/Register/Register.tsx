@@ -1,19 +1,21 @@
 import React, {useState} from 'react';
 import AuthForm from '../../AuthForm/AuthForm';
-import SignupForm, {defaultSignupFormData} from './SignupForm/SignupForm';
+import RegisterForm, {
+  defaultRegisterFormData,
+} from './RegisterForm/RegisterForm';
 
-interface SignupProps {
+interface RegisterProps {
   testID?: string;
   title?: string;
   form?: JSX.Element | JSX.Element[];
 }
 
-const Signup: React.FC<SignupProps> = ({
+const Register: React.FC<RegisterProps> = ({
   testID = 'sign-up-form-container',
   title,
   form,
 }) => {
-  const [formData, setFormData] = useState(defaultSignupFormData);
+  const [formData, setFormData] = useState(defaultRegisterFormData);
 
   const updateFormData = (key: string, value: number | string) => {
     setFormData({
@@ -25,9 +27,9 @@ const Signup: React.FC<SignupProps> = ({
   return (
     <AuthForm
       title={'CREATE YOUR ACCOUNT'}
-      form={<SignupForm formData={formData} onChange={updateFormData} />}
+      form={<RegisterForm formData={formData} onChange={updateFormData} />}
     />
   );
 };
 
-export default Signup;
+export default Register;

@@ -11,25 +11,25 @@ interface AuthScreenProps {
   testID?: string;
 }
 
-const signInFooter: AuthFooterProps = {
+const LoginFooter: AuthFooterProps = {
   title: 'Need an account?',
-  linkUrl: RoutePath.SIGN_UP,
+  linkUrl: RoutePath.REGISTER,
   linkTitle: 'Click Here',
   buttonTitle: 'LOGIN',
 };
 
-const signUpFooter: AuthFooterProps = {
-  title: 'Already have an account?',
+const RegisterFooter: AuthFooterProps = {
+  title: 'Already registed?',
   linkUrl: RoutePath.HOME,
   linkTitle: 'Click Here',
-  buttonTitle: 'SIGN UP',
+  buttonTitle: 'REGISTER',
 };
 
 const determineFooter = (location: Location) => {
   const {pathname} = location;
-  if (pathname === RoutePath.HOME) return signInFooter;
-  if (pathname === RoutePath.SIGN_UP) return signUpFooter;
-  return signInFooter;
+  if (pathname === RoutePath.HOME) return LoginFooter;
+  if (pathname === RoutePath.REGISTER) return RegisterFooter;
+  return LoginFooter;
 };
 
 const AuthScreen: React.FC<AuthScreenProps> = ({testID = 'auth-screen'}) => {
@@ -45,11 +45,11 @@ const AuthScreen: React.FC<AuthScreenProps> = ({testID = 'auth-screen'}) => {
   const onClick = () => {
     const {pathname} = location;
     if (pathname === RoutePath.HOME) {
-      // TODO: ZL | Dispatch Signin Action to Execute Signin Saga
+      // TODO: ZL | Dispatch Login Action to Execute Login Saga
       navigate(RoutePath.HOME);
     }
-    if (pathname === RoutePath.SIGN_UP) {
-      // TODO: ZL | Dispatch Signup Action to Execute Signup Saga
+    if (pathname === RoutePath.REGISTER) {
+      // TODO: ZL | Dispatch Register Action to Execute Register Saga
       navigate(RoutePath.HOME);
     }
   };

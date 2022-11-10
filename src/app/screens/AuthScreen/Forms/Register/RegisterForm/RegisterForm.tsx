@@ -1,24 +1,24 @@
 import React, {ChangeEvent} from 'react';
 import {Form, FormGroup, Label, Input} from 'reactstrap';
 
-export interface SignInFormData {
+export interface LoginFormData {
   email?: string;
   password?: string;
   confirmPassword?: string;
 }
 
-interface SignupFormProps {
-  formData: SignInFormData;
+interface RegisterFormProps {
+  formData: LoginFormData;
   onChange: (name: string, value: string) => void;
 }
 
-export const defaultSignupFormData: SignInFormData = {
+export const defaultRegisterFormData: LoginFormData = {
   email: undefined,
   password: undefined,
   confirmPassword: undefined,
 };
 
-const SignupForm: React.FC<SignupFormProps> = ({formData, onChange}) => {
+const RegisterForm: React.FC<RegisterFormProps> = ({formData, onChange}) => {
   const onFieldChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (e === undefined) return;
     e.preventDefault();
@@ -64,4 +64,4 @@ const SignupForm: React.FC<SignupFormProps> = ({formData, onChange}) => {
   );
 };
 
-export default SignupForm;
+export default RegisterForm;

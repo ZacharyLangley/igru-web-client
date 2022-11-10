@@ -16,5 +16,5 @@ export enum RoutePath {
   STRAINS = '/strains',
   RECIPES = '/recipes',
   SETTINGS = '/settings',
-  SIGN_UP = '/sign-up',
+  REGISTER = '/sign-up',
 }

@@ -3,8 +3,8 @@ import {createBrowserRouter} from 'react-router-dom';
 
 import Error from '../screens/ErrorScreen/ErrorScreen';
 import AuthScreen from '../screens/AuthScreen/AuthScreen';
-import Signin from '../screens/AuthScreen/Forms/Signin/Signin';
-import Signup from '../screens/AuthScreen/Forms/Signup/Signup';
+import Login from '../screens/AuthScreen/Forms/Login/Login';
+import Register from '../screens/AuthScreen/Forms/Register/Register';
 import {RoutePath} from '../types/routes';
 
 const PrivateRouter = createBrowserRouter([
@@ -15,11 +15,11 @@ const PrivateRouter = createBrowserRouter([
     children: [
       {
         path: RoutePath.HOME,
-        element: <Signin />,
+        element: <Login />,
       },
       {
-        path: RoutePath.SIGN_UP,
-        element: <Signup />,
+        path: RoutePath.REGISTER,
+        element: <Register />,
       },
     ],
   },

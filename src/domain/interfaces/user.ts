@@ -8,16 +8,16 @@ export interface User {
   email?: string;
 }
 
-export interface DispatchSignInAction extends Action {
-  type: UserActionTypes.DISPATCH_SIGN_IN_ACTION;
+export interface DispatchLoginAction extends Action {
+  type: UserActionTypes.DISPATCH_LOGIN_ACTION;
 }
 
 export interface DispatchSignOutAction extends Action {
   type: UserActionTypes.DISPATCH_SIGN_OUT_ACTION;
 }
 
-export interface DispatchSignUpAction extends Action {
-  type: UserActionTypes.DISPATCH_SIGN_UP_ACTION;
+export interface DispatchRegisterAction extends Action {
+  type: UserActionTypes.DISPATCH_REGISTER_ACTION;
 }
 
 export interface DispatchResetPasswordAction extends Action {

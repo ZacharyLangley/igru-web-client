@@ -1,22 +1,22 @@
 import React, {ChangeEvent} from 'react';
 import {Form, FormGroup, Label, Input} from 'reactstrap';
 
-export interface SignInFormData {
+export interface LoginFormData {
   email?: string;
   password?: string;
 }
 
-interface SigninFormProps {
-  formData: SignInFormData;
+interface LoginFormProps {
+  formData: LoginFormData;
   onChange: (name: string, value: string) => void;
 }
 
-export const defaultSignInFormData: SignInFormData = {
+export const defaultLoginFormData: LoginFormData = {
   email: undefined,
   password: undefined,
 };
 
-const SigninForm: React.FC<SigninFormProps> = ({formData, onChange}) => {
+const LoginForm: React.FC<LoginFormProps> = ({formData, onChange}) => {
   const onFieldChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (e === undefined) return;
     e.preventDefault();
@@ -51,4 +51,4 @@ const SigninForm: React.FC<SigninFormProps> = ({formData, onChange}) => {
   );
 };
 
-export default SigninForm;
+export default LoginForm;

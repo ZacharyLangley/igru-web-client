@@ -13,7 +13,6 @@ export default function users(
   state: UserState = INITIAL_STATE,
   action: SetUserInformationAction
 ) {
-  console.log(action);
   switch (action.type) {
     case UserActionTypes.SET_USER_INFORMATION_ACTION:
       return {
