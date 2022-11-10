@@ -1,6 +1,7 @@
 import React from 'react';
 
 import logo from '../../assets/branding/IGRU_White_logo.png';
+import strings from '../../assets/strings';
 import './styles.scss';
 
 export interface LogoProps {
@@ -35,7 +36,7 @@ const Logo: React.FC<LogoProps> = ({
     </div>
     {!hideName && (
       <div id={`${testID}:text`} className={'logo-text'}>
-        {'IGRU'}
+        {strings.branding.title}
       </div>
     )}
   </div>

@@ -8,16 +8,29 @@ export interface User {
   email?: string;
 }
 
-export interface DispatchLoginAction extends Action {
-  type: UserActionTypes.DISPATCH_LOGIN_ACTION;
+export interface UserLogin {
+  email?: string;
+  password?: string;
 }
 
-export interface DispatchSignOutAction extends Action {
-  type: UserActionTypes.DISPATCH_SIGN_OUT_ACTION;
+export interface UserRegister {
+  email?: string;
+  password?: string;
+  confirmPassword?: string;
+}
+
+export interface DispatchLoginAction extends Action {
+  type: UserActionTypes.DISPATCH_LOGIN_ACTION;
+  payload: UserLogin;
+}
+
+export interface DispatchLogoutAction extends Action {
+  type: UserActionTypes.DISPATCH_LOGOUT_ACTION;
 }
 
 export interface DispatchRegisterAction extends Action {
   type: UserActionTypes.DISPATCH_REGISTER_ACTION;
+  payload: UserRegister;
 }
 
 export interface DispatchResetPasswordAction extends Action {

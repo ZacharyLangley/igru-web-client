@@ -1,24 +1,33 @@
 import {UserActionTypes} from '../types/user';
 import {
   DispatchLoginAction,
-  DispatchSignOutAction,
+  DispatchLogoutAction,
   DispatchRegisterAction,
   DispatchResetPasswordAction,
   DispatchCreateSessionAction,
   DispatchValidateSessionAction,
   SetUserInformationAction,
+  UserLogin,
+  UserRegister,
+  User,
 } from '../interfaces/user';
 
-export const dispatchLoginAction = (): DispatchLoginAction => ({
+export const dispatchLoginAction = (
+  payload: UserLogin
+): DispatchLoginAction => ({
   type: UserActionTypes.DISPATCH_LOGIN_ACTION,
+  payload,
 });
 
-export const dispatchSignOutAction = (): DispatchSignOutAction => ({
-  type: UserActionTypes.DISPATCH_SIGN_OUT_ACTION,
+export const dispatchLogoutAction = (): DispatchLogoutAction => ({
+  type: UserActionTypes.DISPATCH_LOGOUT_ACTION,
 });
 
-export const dispatchRegisterAction = (): DispatchRegisterAction => ({
+export const dispatchRegisterAction = (
+  payload: UserRegister
+): DispatchRegisterAction => ({
   type: UserActionTypes.DISPATCH_REGISTER_ACTION,
+  payload,
 });
 
 export const dispatchResetPasswordAction = (): DispatchResetPasswordAction => ({
@@ -34,11 +43,9 @@ export const dispatchValidateSessionAction =
     type: UserActionTypes.DISPATCH_VALIDATE_SESSION_ACTION,
   });
 
-export const setUserInformationAction = (): SetUserInformationAction => ({
+export const setUserInformationAction = (
+  payload: User
+): SetUserInformationAction => ({
   type: UserActionTypes.SET_USER_INFORMATION_ACTION,
-  payload: {
-    id: 'mock_user_id',
-    firstName: 'mock_first_name',
-    lastName: 'mock_last_name',
-  },
+  payload,
 });

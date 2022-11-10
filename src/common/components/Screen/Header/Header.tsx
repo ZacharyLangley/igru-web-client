@@ -1,5 +1,6 @@
 import React from 'react';
 import {Navbar, NavbarBrand, Button} from 'reactstrap';
+import strings from '../../../assets/strings';
 
 import Logo from '../../Logo/Logo';
 import './styles.scss';
@@ -25,7 +26,7 @@ const Header: React.FC<HeaderProps> = ({
         outline
         onClick={onClick}
       >
-        {'\u2261'}
+        {strings.special.menu}
       </Button>
       <NavbarBrand id={`${testID}:logo:container`} href='/' className='me-auto'>
         <Logo testID={`${testID}:logo`} />

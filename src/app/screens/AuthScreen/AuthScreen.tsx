@@ -1,10 +1,12 @@
 import React from 'react';
 import {Location, Outlet, useLocation, useNavigate} from 'react-router-dom';
+
 import Logo from '../../../common/components/Logo/Logo';
 import {RoutePath} from '../../types/routes';
-
 import AuthDialog from './AuthDialog/AuthDialog';
 import AuthFooter, {AuthFooterProps} from './AuthFooter/AuthFooter';
+import strings from '../../../common/assets/strings';
+
 import './styles.scss';
 
 interface AuthScreenProps {
@@ -12,17 +14,17 @@ interface AuthScreenProps {
 }
 
 const LoginFooter: AuthFooterProps = {
-  title: 'Need an account?',
+  title: strings.auth.register.footer_title,
   linkUrl: RoutePath.REGISTER,
-  linkTitle: 'Click Here',
-  buttonTitle: 'LOGIN',
+  linkTitle: strings.auth.register.footer_link,
+  buttonTitle: strings.auth.register.footer_button,
 };
 
 const RegisterFooter: AuthFooterProps = {
-  title: 'Already registed?',
+  title: strings.auth.login.footer_title,
   linkUrl: RoutePath.HOME,
-  linkTitle: 'Click Here',
-  buttonTitle: 'REGISTER',
+  linkTitle: strings.auth.login.footer_link,
+  buttonTitle: strings.auth.login.footer_button,
 };
 
 const determineFooter = (location: Location) => {
@@ -38,7 +40,7 @@ const AuthScreen: React.FC<AuthScreenProps> = ({testID = 'auth-screen'}) => {
   const branding = (
     <div className={'auth-screen-branding'}>
       <Logo height={100} width={100} hideName />
-      <div className={'auth-screen-title'}>{'IGRU'}</div>
+      <div className={'auth-screen-title'}>{strings.branding.title}</div>
     </div>
   );
 

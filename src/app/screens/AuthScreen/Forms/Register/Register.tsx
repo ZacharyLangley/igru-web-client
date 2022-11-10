@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import strings from '../../../../../common/assets/strings';
 import AuthForm from '../../AuthForm/AuthForm';
 import RegisterForm, {
   defaultRegisterFormData,
@@ -26,7 +27,7 @@ const Register: React.FC<RegisterProps> = ({
 
   return (
     <AuthForm
-      title={'CREATE YOUR ACCOUNT'}
+      title={strings.auth.register.form_title}
       form={<RegisterForm formData={formData} onChange={updateFormData} />}
     />
   );

@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import strings from '../../../../../common/assets/strings';
 import AuthForm from '../../AuthForm/AuthForm';
 import LoginForm, {defaultLoginFormData} from './LoginForm/LoginForm';
 
@@ -24,7 +25,7 @@ const Login: React.FC<LoginProps> = ({
 
   return (
     <AuthForm
-      title={'SIGN INTO YOUR ACCOUNT'}
+      title={strings.auth.login.form_title}
       form={<LoginForm formData={formData} onChange={updateFormData} />}
     />
   );

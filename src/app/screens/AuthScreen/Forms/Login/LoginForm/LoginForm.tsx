@@ -1,5 +1,6 @@
 import React, {ChangeEvent} from 'react';
 import {Form, FormGroup, Label, Input} from 'reactstrap';
+import strings from '../../../../../../common/assets/strings';
 
 export interface LoginFormData {
   email?: string;
@@ -23,30 +24,38 @@ const LoginForm: React.FC<LoginFormProps> = ({formData, onChange}) => {
     onChange(e.target.name, e.target.value);
   };
 
+  const emailField = (
+    <FormGroup floating>
+      <Input
+        id={'email'}
+        name={'name'}
+        type={'email'}
+        value={formData.email}
+        placeholder={''}
+        onChange={onFieldChange}
+      />
+      <Label for={'email'}>{strings.auth.login.form_input_email_label}</Label>
+    </FormGroup>
+  );
+
+  const passwordField = (
+    <FormGroup floating>
+      <Input
+        id={'password'}
+        name={'password'}
+        type={'password'}
+        value={formData.password}
+        placeholder={''}
+        onChange={onFieldChange}
+      />
+      <Label for={'email'}>{strings.auth.login.form_input_password_label}</Label>
+    </FormGroup>
+  );
+
   return (
     <Form>
-      <FormGroup floating>
-        <Input
-          id={'email'}
-          name={'name'}
-          type={'email'}
-          value={formData.email}
-          placeholder={''}
-          onChange={onFieldChange}
-        />
-        <Label for={'email'}>{'Email'}</Label>
-      </FormGroup>
-      <FormGroup floating>
-        <Input
-          id={'password'}
-          name={'password'}
-          type={'password'}
-          value={formData.password}
-          placeholder={''}
-          onChange={onFieldChange}
-        />
-        <Label for={'email'}>{'Password'}</Label>
-      </FormGroup>
+      {emailField}
+      {passwordField}
     </Form>
   );
 };
